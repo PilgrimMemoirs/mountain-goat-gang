@@ -36,8 +36,8 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :mountain_goat_gang, MountainGoatGang.Repo,
   adapter: Ecto.Adapters.MySQL,
-  username: "root",
-  password: "",
+  username: "JKunte",
+  password: "root",
   database: "mountain_goat_gang_dev",
   hostname: "localhost",
   pool_size: 10

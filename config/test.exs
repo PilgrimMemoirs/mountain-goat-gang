@@ -12,8 +12,8 @@ config :logger, level: :warn
 # Configure your database
 config :mountain_goat_gang, MountainGoatGang.Repo,
   adapter: Ecto.Adapters.MySQL,
-  username: "root",
-  password: "",
-  database: "mountain_goat_gang_test",
+  username: "JKunte",
+  password: "root",
+  database: "mountain_goat_gang_dev",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
