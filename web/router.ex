@@ -24,5 +24,8 @@ defmodule MountainGoatGang.Router do
      pipe_through :api
 
      resources "/users", UserController, except: [:new, :edit]
+     resources "/hikes", HikeController, except: [:new, :edit]
+     resources "/trails", TrailController, except: [:new, :edit]
+     resources "/groups", GroupController, except: [:new, :edit]
    end
 end
