@@ -8,6 +8,6 @@ defmodule MountainGoatGang.Trail do
     field(:level, :string)
     field(:latitude, :string)
     field(:longtitude, :string)
-    belongs_to(:hike, MountainGoatGang.Hike)
+    many_to_many(:hikes, MountainGoatGang.Hike, join_through: "hikes_trails")
   end
 end

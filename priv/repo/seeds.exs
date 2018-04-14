@@ -10,4 +10,7 @@
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
 
-MountainGoatGang.Repo.insert!(%MountainGoatGang.User{firstName: "Jenny", lastName: "Kunte"})
+MountainGoatGang.Repo.insert!(%MountainGoatGang.User{
+  firstName: "Jenny",
+  lastName: "Kunte"
+})

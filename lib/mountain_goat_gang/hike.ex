@@ -6,12 +6,11 @@ defmodule MountainGoatGang.Hike do
     field(:description, :string)
     field(:status, :string)
     field(:level, :string)
-    field(:date, :naive_datetime)
+    field(:date, :utc_datetime)
     field(:time, :time)
     field(:distanceM, :float)
     field(:meetUpLocation, :string)
-    has_one(:trail, MountainGoatGang.Trail)
-
+    many_to_many(:trails, MountainGoatGang.Trail, join_through: "hikes_trails")
     many_to_many(:groups, MountainGoatGang.Group, join_through: "groups_hikes")
     many_to_many(:hikes, MountainGoatGang.Hike, join_through: "groups_hikes")
   end
