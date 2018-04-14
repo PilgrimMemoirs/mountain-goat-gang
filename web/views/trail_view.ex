@@ -11,12 +11,11 @@ defmodule MountainGoatGang.TrailView do
 
   def render("trail.json", %{trail: trail}) do
     %{id: trail.id,
-      trailName: trail.trailName,
-      trailDescription: trail.trailDescription,
-      trailDistanceKm: trail.trailDistanceKm,
-      trailDifficulty: trail.trailDifficulty,
-      trailElevationMeter: trail.trailElevationMeter,
-      trailLat: trail.trailLat,
-      trailLong: trail.trailLong}
+      name: trail.name,
+      location: trail.location,
+      description: trail.description,
+      level: trail.level,
+      latitude: trail.latitude,
+      longtitude: trail.longtitude}
   end
 end

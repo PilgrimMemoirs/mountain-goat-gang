@@ -12,7 +12,7 @@ config :mountain_goat_gang,
 # Configures the endpoint
 config :mountain_goat_gang, MountainGoatGang.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "ZmWwCYPYs031P7PqlDyiMfF4Psy0mCocisct+bzJvws0sG4v6zV1RANZDl5g0pK3",
+  secret_key_base: "5MCzpHTFiJPh4HYIm4RUGwPSx7wX3V5hIz7twJ7QNkhDzB+cbiSnGYtMCHIHVLzc",
   render_errors: [view: MountainGoatGang.ErrorView, accepts: ~w(html json)],
   pubsub: [name: MountainGoatGang.PubSub,
            adapter: Phoenix.PubSub.PG2]

@@ -2,7 +2,7 @@ defmodule MountainGoatGang.UserControllerTest do
   use MountainGoatGang.ConnCase
 
   alias MountainGoatGang.User
-  @valid_attrs %{email: "some content", firstName: "some content", lastName: "some content"}
+  @valid_attrs %{firstName: "some content", lastName: "some content"}
   @invalid_attrs %{}
 
   setup %{conn: conn} do
@@ -19,8 +19,7 @@ defmodule MountainGoatGang.UserControllerTest do
     conn = get conn, user_path(conn, :show, user)
     assert json_response(conn, 200)["data"] == %{"id" => user.id,
       "firstName" => user.firstName,
-      "lastName" => user.lastName,
-      "email" => user.email}
+      "lastName" => user.lastName}
   end
 
   test "renders page not found when id is nonexistent", %{conn: conn} do

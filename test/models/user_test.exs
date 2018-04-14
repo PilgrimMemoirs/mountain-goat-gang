@@ -3,7 +3,7 @@ defmodule MountainGoatGang.UserTest do
 
   alias MountainGoatGang.User
 
-  @valid_attrs %{email: "some content", firstName: "some content", lastName: "some content"}
+  @valid_attrs %{firstName: "some content", lastName: "some content"}
   @invalid_attrs %{}
 
   test "changeset with valid attributes" do

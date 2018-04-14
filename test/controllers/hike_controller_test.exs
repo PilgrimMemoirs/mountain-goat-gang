@@ -2,7 +2,7 @@ defmodule MountainGoatGang.HikeControllerTest do
   use MountainGoatGang.ConnCase
 
   alias MountainGoatGang.Hike
-  @valid_attrs %{complete: true, date: %{day: 17, hour: 14, min: 0, month: 4, sec: 0, year: 2010}, description: "some content", hikeName: "some content"}
+  @valid_attrs %{date: %{day: 17, hour: 14, min: 0, month: 4, sec: 0, year: 2010}, description: "some content", distanceM: "120.5", level: "some content", meetUpLocation: "some content", name: "some content", status: "some content", time: %{hour: 14, min: 0, sec: 0}}
   @invalid_attrs %{}
 
   setup %{conn: conn} do
@@ -18,10 +18,14 @@ defmodule MountainGoatGang.HikeControllerTest do
     hike = Repo.insert! %Hike{}
     conn = get conn, hike_path(conn, :show, hike)
     assert json_response(conn, 200)["data"] == %{"id" => hike.id,
-      "hikeName" => hike.hikeName,
+      "name" => hike.name,
       "description" => hike.description,
+      "status" => hike.status,
+      "level" => hike.level,
       "date" => hike.date,
-      "complete" => hike.complete}
+      "time" => hike.time,
+      "distanceM" => hike.distanceM,
+      "meetUpLocation" => hike.meetUpLocation}
   end
 
   test "renders page not found when id is nonexistent", %{conn: conn} do

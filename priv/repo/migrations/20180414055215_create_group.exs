@@ -3,8 +3,9 @@ defmodule MountainGoatGang.Repo.Migrations.CreateGroup do
 
   def change do
     create table(:groups) do
-      add :groupName, :string
-      add :groupDescription, :string
+      add :name, :string
+      add :code, :string
+      add :description, :string
 
       timestamps()
     end

@@ -5,7 +5,6 @@ defmodule MountainGoatGang.Repo.Migrations.CreateUser do
     create table(:users) do
       add :firstName, :string
       add :lastName, :string
-      add :email, :string
 
       timestamps()
     end

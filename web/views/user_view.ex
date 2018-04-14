@@ -12,7 +12,6 @@ defmodule MountainGoatGang.UserView do
   def render("user.json", %{user: user}) do
     %{id: user.id,
       firstName: user.firstName,
-      lastName: user.lastName,
-      email: user.email}
+      lastName: user.lastName}
   end
 end

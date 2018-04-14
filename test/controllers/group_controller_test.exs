@@ -2,7 +2,7 @@ defmodule MountainGoatGang.GroupControllerTest do
   use MountainGoatGang.ConnCase
 
   alias MountainGoatGang.Group
-  @valid_attrs %{groupDescription: "some content", groupName: "some content"}
+  @valid_attrs %{code: "some content", description: "some content", name: "some content"}
   @invalid_attrs %{}
 
   setup %{conn: conn} do
@@ -18,8 +18,9 @@ defmodule MountainGoatGang.GroupControllerTest do
     group = Repo.insert! %Group{}
     conn = get conn, group_path(conn, :show, group)
     assert json_response(conn, 200)["data"] == %{"id" => group.id,
-      "groupName" => group.groupName,
-      "groupDescription" => group.groupDescription}
+      "name" => group.name,
+      "code" => group.code,
+      "description" => group.description}
   end
 
   test "renders page not found when id is nonexistent", %{conn: conn} do

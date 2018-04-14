@@ -36,7 +36,7 @@ defmodule MountainGoatGang.Endpoint do
   plug Plug.Session,
     store: :cookie,
     key: "_mountain_goat_gang_key",
-    signing_salt: "kFRkWlk7"
+    signing_salt: "cvgiwyXw"
 
   plug MountainGoatGang.Router
 end

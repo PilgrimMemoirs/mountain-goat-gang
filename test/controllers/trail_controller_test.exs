@@ -2,7 +2,7 @@ defmodule MountainGoatGang.TrailControllerTest do
   use MountainGoatGang.ConnCase
 
   alias MountainGoatGang.Trail
-  @valid_attrs %{trailDescription: "some content", trailDifficulty: "some content", trailDistanceKm: "120.5", trailElevationMeter: "120.5", trailLat: "some content", trailLong: "some content", trailName: "some content"}
+  @valid_attrs %{description: "some content", latitude: "some content", level: "some content", location: "some content", longtitude: "some content", name: "some content"}
   @invalid_attrs %{}
 
   setup %{conn: conn} do
@@ -18,13 +18,12 @@ defmodule MountainGoatGang.TrailControllerTest do
     trail = Repo.insert! %Trail{}
     conn = get conn, trail_path(conn, :show, trail)
     assert json_response(conn, 200)["data"] == %{"id" => trail.id,
-      "trailName" => trail.trailName,
-      "trailDescription" => trail.trailDescription,
-      "trailDistanceKm" => trail.trailDistanceKm,
-      "trailDifficulty" => trail.trailDifficulty,
-      "trailElevationMeter" => trail.trailElevationMeter,
-      "trailLat" => trail.trailLat,
-      "trailLong" => trail.trailLong}
+      "name" => trail.name,
+      "location" => trail.location,
+      "description" => trail.description,
+      "level" => trail.level,
+      "latitude" => trail.latitude,
+      "longtitude" => trail.longtitude}
   end
 
   test "renders page not found when id is nonexistent", %{conn: conn} do

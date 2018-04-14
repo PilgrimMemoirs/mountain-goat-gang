@@ -11,9 +11,13 @@ defmodule MountainGoatGang.HikeView do
 
   def render("hike.json", %{hike: hike}) do
     %{id: hike.id,
-      hikeName: hike.hikeName,
+      name: hike.name,
       description: hike.description,
+      status: hike.status,
+      level: hike.level,
       date: hike.date,
-      complete: hike.complete}
+      time: hike.time,
+      distanceM: hike.distanceM,
+      meetUpLocation: hike.meetUpLocation}
   end
 end

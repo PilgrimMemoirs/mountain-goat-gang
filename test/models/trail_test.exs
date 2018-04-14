@@ -3,7 +3,7 @@ defmodule MountainGoatGang.TrailTest do
 
   alias MountainGoatGang.Trail
 
-  @valid_attrs %{trailDescription: "some content", trailDifficulty: "some content", trailDistanceKm: "120.5", trailElevationMeter: "120.5", trailLat: "some content", trailLong: "some content", trailName: "some content"}
+  @valid_attrs %{description: "some content", latitude: "some content", level: "some content", location: "some content", longtitude: "some content", name: "some content"}
   @invalid_attrs %{}
 
   test "changeset with valid attributes" do

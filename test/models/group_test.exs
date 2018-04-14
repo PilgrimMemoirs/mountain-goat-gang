@@ -3,7 +3,7 @@ defmodule MountainGoatGang.GroupTest do
 
   alias MountainGoatGang.Group
 
-  @valid_attrs %{groupDescription: "some content", groupName: "some content"}
+  @valid_attrs %{code: "some content", description: "some content", name: "some content"}
   @invalid_attrs %{}
 
   test "changeset with valid attributes" do

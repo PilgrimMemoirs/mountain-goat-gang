@@ -11,7 +11,8 @@ defmodule MountainGoatGang.GroupView do
 
   def render("group.json", %{group: group}) do
     %{id: group.id,
-      groupName: group.groupName,
-      groupDescription: group.groupDescription}
+      name: group.name,
+      code: group.code,
+      description: group.description}
   end
 end
